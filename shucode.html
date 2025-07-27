@@ -3,15 +3,16 @@
 <head>
   <style>
     body {
-      background-color: rgb(234, 229, 68);
+      background-color: rgb(246, 228, 69);
       background-image:
-        radial-gradient(transparent 0.6em, rgb(251, 249, 124) 0.6em),
+        radial-gradient(transparent 0.6em, rgb(239, 245, 61) 0.6em),
         conic-gradient(at 1em 1em, transparent 270deg, #4203 270deg),
         conic-gradient(at 1em 1em, transparent 270deg, #4204 270deg),
         conic-gradient(at 1em 1em, transparent 270deg, #4205 270deg),
         conic-gradient(at 1em 1em, transparent 270deg, #4206 270deg);
       background-size: 1em 1em, 4em 4em, 4em 4em, 4em 4em, 4em 4em;
-      animation: bpx 12s infinite, bpy 12s -3.75s infinite;
+      animation: bpx 30s infinite, bpy 12s -3.75s infinite;
+      text-align: center;
     }
 
     @keyframes bpx {
@@ -35,10 +36,30 @@
       75%, 82.5% { background-position-y: 0, -1em, -2em, 5em, 4em; }
       87.5%, 95% { background-position-y: 0, -3em, 0, 3em, 6em; }
     }
+
+    /* Slide-up animation */
+    .slide-up {
+      animation: slideUp 1.2s ease-out forwards;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-  <img src="Shu_Elite_2.png" width="1900" height="1900"> 
-  <img src="Shu.png" width="1900" height="1900"> 
+
+  <div class="slide-up">
+    <img src="Shu_Elite_2.png" width="600" height="600">
+  </div>
+
+  <img src="Shu.png" width="600" height="600">
+
 </body>
 </html>
+
